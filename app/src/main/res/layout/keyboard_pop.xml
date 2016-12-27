@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_half_half_half"
+    android:gravity="bottom"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/im_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/guanbixiao" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="请输入支付密码"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:gravity="center_horizontal"
+            android:text="您的手机不在常用地区登录，为保障您的资金安全，请输入支付密码"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp" />
+        <com.efly.map.keydemo.PassWordEdit
+            android:id="@+id/passWordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_tip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:maxLength="6"
+            android:textColor="@color/colorAccent" />
+        <Button
+            android:id="@+id/bt_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passWordEdit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btbg"
+            android:text="确定" />
+
+    </RelativeLayout>
+
+    <com.efly.map.keydemo.mytest.NumKeyView
+        android:id="@+id/keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@color/colorAccent"
+        app:deleteDrawable="@drawable/keyboard_backspace"
+        app:gbColor="#eeeeee" />
+</LinearLayout>
